@@ -20,6 +20,7 @@ app_license = "mit"
 # 		"has_permission": "bug_fixer.api.permission.has_app_permission"
 # 	}
 # ]
+after_install = "bug_fixer.bug_fixer.__init__.patch_india_compliance_override"
 override_whitelisted_methods = {
     "erpnext.accounts.doctype.payment_entry.payment_entry.get_advance_payment_entries":
         "bug_fixer.overrides.payment_entry.get_advance_payment_entries"
